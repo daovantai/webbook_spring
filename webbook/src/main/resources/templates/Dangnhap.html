@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThuVienSach</title>
+    <link href="styles/main1.css" rel="stylesheet" type="text/css"/>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .out{
+            color: red
+        }
+    </style>
+</head>
+<body>
+    <section class="sub3-header">
+        <nav>
+            <a class="out" href="/"><i class="fa-solid fa-book"></i> Trang chủ</a>
+        </nav> 
+        <div class="sign_up">
+            <i class="fa-solid fa-user fix"></i>
+            <h1>Đăng nhập</h1>
+            <form action="dangnhap" method="post">
+	            <span style="color:red" th:text=${mess}></span><br>
+	            <span style="color:royalblue" th:text=${messs}></span><br>
+                <input type="text" class="input_box" placeholder="Tên đăng nhập" name="tendn1" required>
+                <input type="password" class="input_box" placeholder="Mật khẩu" name="matkhau1" required>
+                <p><span><input type="checkbox"></span> Tôi đồng ý với các điều khoản</p>
+                <input type = "submit" value = "Đăng nhập" id = "submit" class="sign-btn" ><br>
+                
+              
+                <button type="button" class="sign-fb">Login with Facebook</button>
+                <p>Bạn đã có tài khoản chưa? <a href="/dangki" class="a-btn">Đăng kí</a></p>
+            </form>
+        </div>
+        <h1 class="ll"></h1>
+         
+    </section>
+</body>
+</html>
